@@ -1,0 +1,11 @@
+.CardsDiv{
+    width: 80%;
+    margin: 0 auto;
+    padding: 0px;
+    display: grid;
+    grid-template-columns: 280px 280px 280px;
+    grid-template-rows: 400px 400px 400px 400px;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}

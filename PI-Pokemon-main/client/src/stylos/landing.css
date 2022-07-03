@@ -1,0 +1,95 @@
+.landing {
+
+    width: 100%;
+    height: 100vh;
+    background-image: url(./wall_landing.jpg);
+    background-size: 100%;
+    background-position: right;
+    background-position-y: bottom;
+    text-align: center;
+    background-repeat: no-repeat;
+    position: relative;
+    background-color: none;
+}
+/*
+.h1 {
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 90px;
+    text-align: left;
+    color: #34495E;
+    padding-top: 100px;
+    padding-left: 100px;
+    margin-top: 0;
+
+}
+*/
+
+.btnblue {
+    background-image: url(./blue.png);
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    right: 155vh;
+    top: 90px;
+    display: inline-block;
+    border: none;
+    padding: 20px;
+    width: 70px;
+    border-radius: 900px;
+    height: 70px;
+    transition: all 0.5s;
+    cursor: pointer;
+   }
+
+   .btnblue:hover
+   {
+    width: 80px;
+    height: 80px;
+   }
+
+   .btngreen {
+    background-image: url(./green.png);
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    right: 40vh;
+    top: 90px;
+    display: inline-block;
+    border: none;
+    padding: 20px;
+    width: 70px;
+    border-radius: 900px;
+    height: 70px;
+    transition: all 0.5s;
+    cursor: pointer;
+   }
+
+   .btngreen:hover
+   {
+    width: 80px;
+    height: 80px;
+   }
+
+   .btnred {
+    background-image: url(./red.png);
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    right: 100vh;
+    top: 90px;
+    display: inline-block;
+    border: none;
+    padding: 20px;
+    width: 70px;
+    border-radius: 900px;
+    height: 70px;
+    transition: all 0.5s;
+    cursor: pointer;
+   }
+
+   .btnred:hover
+   {
+    width: 80px;
+    height: 80px;
+   }

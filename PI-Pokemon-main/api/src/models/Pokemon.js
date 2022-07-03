@@ -1,50 +1,41 @@
-const { DataTypes } = require('sequelize');
+const { DataTypes, UUIDV4 } = require('sequelize');
 // Exportamos una funcion que define el modelo
 // Luego le injectamos la conexion a sequelize.
 module.exports = (sequelize) => {
   // defino el modelo
   sequelize.define('pokemon', {
-    id: {
+    id:{
       type: DataTypes.UUID,
-      defaultValue: DataTypes.UUIDV4,
-      allowNull: false,
-      primaryKey: true
-    },
-    img: {
-      type: DataTypes.STRING,
+      defaultValue:DataTypes.UUIDV4,
+      primaryKey: true,
+      allowNull: false 
     },
     name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    hp: {
-      type: DataTypes.INTEGER,
-      allowNull: false
+    vida:{
+      type:DataTypes.STRING
     },
-    attack: {
-      type: DataTypes.INTEGER,
-      allowNull: false
+    fuerza:{
+      type:DataTypes.STRING
     },
-    defense: {
-      type: DataTypes.INTEGER,
-      allowNull: false
+    defensa:{
+      type:DataTypes.STRING
     },
-    speed: {
-      type: DataTypes.INTEGER,
-      allowNull: false
+    velocidad:{
+      type:DataTypes.STRING
     },
-    height: {
-      type: DataTypes.INTEGER,
-      allowNull: false
+    altura:{
+      type:DataTypes.STRING
     },
-    weight: {
-      type: DataTypes.INTEGER,
-      allowNull: false
+    peso:{
+      type:DataTypes.STRING
     },
-    createdInDb: {
-      type: DataTypes.BOOLEAN,
-      defaultValue: true,
-      allowNull: false
-    },
-  }, { timestamps: false });
+    img:{
+      type:DataTypes.STRING,
+      defaultValue:'https://cdn-icons-png.flaticon.com/512/634/634741.png'
+    }
+  });
 };
+

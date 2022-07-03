@@ -1,0 +1,40 @@
+.paginado {
+    display: inline-block;
+    font-size: medium;
+    
+
+}
+.paginado li {
+    display: inline;
+    
+}
+
+.paginado li button {
+    float: left;
+    padding: 8px 18px;
+    border-radius: 100%;
+    background-color: white;
+    border: transparent;
+    margin: 3px;
+    color: darkred;
+    border: 1px solid black;
+    
+
+}
+
+.paginado li button:hover{
+    background-color: darkred;
+    color: white;
+    border: 1px solid white;
+  }
+
+.paginado li button:active{
+    background-color: black;
+    box-shadow: 0 1px white;
+    transform: translateY(1px);
+}
+
+.paginado li button:focus{
+    background-color: black;
+    border: 1px solid white;
+}

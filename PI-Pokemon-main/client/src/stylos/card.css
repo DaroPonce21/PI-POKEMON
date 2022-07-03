@@ -1,0 +1,67 @@
+.CardDiv{
+    width: 100%;
+    height: 100%;
+    min-height: 300px; 
+    padding: 0px;
+    background-image: linear-gradient(to bottom,#EEEEEE,#EEEEEE);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+}
+
+.CardDivImg{
+    background-image:linear-gradient(to bottom, white, #EEEEEE ) ;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.CardImg{
+    max-width: 150px;
+    max-height: 150px;
+}
+/*
+.CardId{
+    color: darkred;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 15px;
+}
+*/
+.CardDivName{
+    font-family: 'Nunito', sans-serif;
+}
+
+.CardLinkName{
+    color: #ffffff;
+    text-decoration: none;
+    
+}
+.CardName{
+    margin-right: auto;
+    margin-left: auto;
+    width: max-content;
+    font-size: 18px;
+    font-weight: lighter;
+    padding: 8px 35px 8px 35px;
+    background-image: linear-gradient(to right, rgb(178, 4, 4), rgb(100, 2, 2));
+    border-radius: 30px;
+}
+
+.CardName:hover{
+    background-image: linear-gradient(to right, rgb(238, 52, 52), rgb(133, 40, 40));
+    box-shadow: 1px 1px 15px red;
+}
+
+
+.CardDivTipos{
+    margin-top: 30px; 
+}
+.CardTipos{
+    margin: 10px;
+    padding: 4px 10px 4px 10px;
+    color: darkred;
+}

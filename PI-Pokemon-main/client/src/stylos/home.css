@@ -1,0 +1,118 @@
+.nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+    opacity: 0.9;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bolder;
+    border-bottom: 1px solid transparent;
+    border-image: linear-gradient(right, rgb(178, 4, 4), rgb(100, 2, 2)) 1;
+}
+.conteiner{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Nunito', sans-serif;
+    color: darkred;
+    font-weight: bolder;
+}
+.linkHome{
+    color: darkred;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 20px 50px 20px 50px;
+
+}
+.linkHome:hover{
+    cursor: pointer;
+    background-color: darkred;
+    color: white;
+}
+.linkCrearPokemon{
+    display: block;
+    width: max-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+.crearPokemon{
+    padding: 15px 300px 15px 300px;
+    border: 1px solid black;
+    border-radius: 30px;
+    background-color: white;
+    color: darkred;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bolder;
+    font-size: 17px;
+    margin-top: 50px;
+    box-shadow: 1px 1px 10px black;
+}
+.crearPokemon:hover{
+    background-color: transparent;
+    cursor: pointer;
+    color: white;
+}
+
+.filtrosConteiner{
+    padding: 10px 150px 10px 150px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-bottom: 1px solid transparent;
+    border-image: linear-gradient(to right,#e4f0e9 0%, #AAD8D3 100%) 1;
+}
+.ordenConteiner{
+    padding: 20px 150px 20px 150px;
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 2px solid transparent;
+    border-image: linear-gradient(to right,#e4f0e9 0%, #AAD8D3 100%) 1;
+}
+.btn{
+    font-family: 'Nunito', sans-serif;
+    font-weight: bolder;
+    color: white;
+    background-color: darkred;
+    padding: 10px 50px 10px 50px;
+    border: 1px solid black;
+    border-radius: 30px;
+    box-shadow: 1px 1px 10px black;
+}
+.btn:hover{
+    cursor: pointer;
+    background-color: #EEEEEE;
+    
+}
+.noEncontrados{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: max-content;
+    margin-top: 15px;
+    font-family: 'Nunito', sans-serif;
+    color: #7a1515;
+    background-color: rgba(252, 231, 212, 0.9);
+    padding: 10px 30px 10px 30px;
+    border: 1px solid #ff0000;
+    border-radius: 30px;
+}
+.select{
+    padding: 2px 15px 2px 15px;
+    border-radius: 30px;
+    margin-left: 10px;
+    text-align: center;
+    width: 150px;
+    outline: none;
+    background-color: darkred;
+    border: 1px solid black;
+    color: white;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bolder;
+}
+
+option{
+    background-color: darkred;
+    color: white;
+}
+
+
