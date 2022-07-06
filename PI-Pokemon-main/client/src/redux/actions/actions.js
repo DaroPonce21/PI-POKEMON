@@ -1,4 +1,4 @@
-import { GET_POKEMONES, GET_POKEMON_DETAIL, CLEAN_POKEMON_DETAIL, GET_TYPES, SELECT_TYPE, FILTER_POKEMON_TYPE, FILTER_POKEMON_ORIGIN, ORDER_BY_NAME, ORDER_BY_STRENGTH, CLEAN_FILTERS, SEARCH_POKEMON, CLEAN_SEARCH_POKEMON } from "./consts";
+import { GET_POKEMONES, GET_POKEMON_DETAIL, CLEAN_POKEMON_DETAIL, GET_TYPES, SELECT_TYPE, FILTER_POKEMON_TYPE, FILTER_POKEMON_ORIGIN, ORDER_BY_NAME, ORDER_BY_STRENGTH, CLEAN_FILTERS, SEARCH_POKEMON, CLEAN_SEARCH_POKEMON, CLEAN_POKEMON , DELETED_POKEMON , CLEANER } from "./consts";
 import axios from 'axios';
 
 export function cleanFilters(){
@@ -100,4 +100,34 @@ export function cleanPokemonDetail(){
         type:CLEAN_POKEMON_DETAIL,
         payload:{}
     }
+}
+
+export function deletePokemon(id) {
+    return async function (dispatch) {
+        try {
+            const deletePokemon = await axios.delete('http://localhost:3001/'+id);
+            return dispatch({
+                type: DELETED_POKEMON,
+                payload: deletePokemon.data,
+            });
+        } catch (error) {
+            console.log(error);
+        }
+    };
+}
+
+
+export function cleanPokemon() {
+    return {
+        type: CLEAN_POKEMON,
+        payload: {},
+    };
+}
+
+
+export function cleaner() {
+    return {
+        type: CLEANER,
+        payload: {},
+    };
 }

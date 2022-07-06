@@ -10,6 +10,12 @@ module.exports = (sequelize) => {
       primaryKey: true,
       allowNull: false 
     },
+    /*
+    id: {
+      type: DataTypes.INTEGER,
+      autoIncrement: true,
+      primaryKey: true
+  },*/
     name: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -34,8 +40,9 @@ module.exports = (sequelize) => {
     },
     img:{
       type:DataTypes.STRING,
-      defaultValue:'https://cdn-icons-png.flaticon.com/512/634/634741.png'
-    }
+      defaultValue:'https://www.pinpng.com/pngs/m/8-82850_poke-ball-png-pokeball-png-transparent-png.png'
+    },
+
   });
 };
 

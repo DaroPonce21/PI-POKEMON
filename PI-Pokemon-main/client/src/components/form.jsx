@@ -150,7 +150,7 @@ export const Form = () => {
                 </div>
                 <div className='footer'>
                     {Object.values(errors).join('') == false ? <input className='crearPokemon' type="submit" disabled={false} /> : <input type="submit" className='crearPokemon' disabled={true} />}
-                    <Link to="/home" className='home'>Pokedex</Link>
+                    <Link to="/home" className=''><button className="home">POKEDEX</button></Link>
                 </div>
             </form>
 

@@ -94,17 +94,17 @@ export const Home = () =>{
         if(filter === true && pokemonesFiltered.length === 0){
             return(<>
             <span className='noEncontrados'>No se han encontrado pokemones con los filtros seleccionados</span>
-            <Paginado pokemonsPerPage={pokemonsPerPage} allPokemons={allPokemons.length} paginado={paginado}/>
+            <div className="paginado"><Paginado pokemonsPerPage={pokemonsPerPage} allPokemons={allPokemons.length} paginado={paginado}/></div>
             <Cards pokemones={currentPokemon}/>
             </>)
         }else if(filter === true && pokemonesFiltered.length > 0){
             return(<>
-                <Paginado pokemonsPerPage={pokemonsPerPage} allPokemons={allPokemons.length-9} paginado={paginado}/>
+                <div className="paginado"><Paginado pokemonsPerPage={pokemonsPerPage} allPokemons={allPokemons.length-9} paginado={paginado}/></div>
                 <Cards pokemones={currentPokemon}/>
                 </>)
         }else if(pokemonesSearch.length > 0 && typeof(pokemonesSearch[0]) == 'string'){
             return(<>
-            <Paginado pokemonsPerPage={pokemonsPerPage} allPokemons={allPokemons.length-9} paginado={paginado}/>
+            <div className="paginado"><Paginado pokemonsPerPage={pokemonsPerPage} allPokemons={allPokemons.length-9} paginado={paginado}/></div>
                   <span className='noEncontrados'>No se han encontrado pokemones con el nombre ingresado</span>
                 <Cards pokemones={currentPokemon}/>
                 </>)
@@ -114,7 +114,7 @@ export const Home = () =>{
             </>)
         }else{
             return(<>
-            <Paginado pokemonsPerPage={pokemonsPerPage} allPokemons={allPokemons.length-9} paginado={paginado}/>
+            <div className="paginado"><Paginado pokemonsPerPage={pokemonsPerPage} allPokemons={allPokemons.length-9} paginado={paginado}/></div>
                 <Cards pokemones={currentPokemon}/>
                 </>)
         }

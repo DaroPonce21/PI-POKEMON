@@ -5,6 +5,7 @@ import { Home } from './components/home.jsx';
 import { Detail } from './components/detail.jsx';
 import { Form } from './components/form';
 
+
 function App() {
   return (
     <Routes>
@@ -12,7 +13,7 @@ function App() {
       <Route to path='/home' element={<Home/>}/>
       <Route to path='/detail/:id' element={<Detail/>}/>
       <Route to path='/create' element={<Form/>}/>
-    </Routes>
+     </Routes>
   );
 }
 

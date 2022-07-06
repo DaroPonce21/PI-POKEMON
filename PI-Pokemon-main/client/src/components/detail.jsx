@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useParams } from "react-router";
-import { Link } from "react-router-dom";
-import { getPokemonDetail, cleanPokemonDetail } from "../redux/actions/actions";
+import { Link, useNavigate } from "react-router-dom";
+import { getPokemonDetail, cleanPokemonDetail, cleaner, cleanPokemon, deletePokemon } from "../redux/actions/actions";
 import { Loader } from "./loader";
 import "../stylos/detail.css"
 
@@ -11,14 +11,12 @@ export const Detail = () =>{
     
     const dispatch = useDispatch();
     const id = useParams();
-
-  
+    const navigate = useNavigate()
 
     useEffect(()=>{
         dispatch(getPokemonDetail(id.id))
         return () => dispatch(cleanPokemonDetail())
     },[dispatch])
-
 
     const detail = useSelector(state => state.pokemonDetail);
     
@@ -28,6 +26,22 @@ export const Detail = () =>{
     }else if(detail.tipos){
     tipos = detail.tipos.map(tipo => <h5 className='DetailTipo' key={tipo.id}>{tipo.name}</h5>)
     }
+
+
+    function handleDelete(e) {
+        if (id.id.length > 5) {
+            e.preventDefault()
+            dispatch(cleanPokemon())
+            dispatch(deletePokemon(id.id))
+            dispatch(cleaner())
+            alert('El Pokemon fue eliminado')
+            navigate('/home')
+        }else{
+            alert('No podemos borrar el gran trabajo de Ken Sugimori.')
+        }
+    }
+
+
     return(
         <div className='DetailDiv'>
             {tipos.length > 0 ? <>
@@ -35,7 +49,8 @@ export const Detail = () =>{
             <div className='DetailDiv2'>
             
             <div className="divDetail">
-            <Link to='/home'><button id="POKEDEX" className="DetailButtonHome">POKEDEX</button></Link></div>
+            <Link to='/home'><button id="POKEDEX" className="DetailButtonHome">POKEDEX</button></Link>
+            <button className="DetailButtonHome" onClick={(e) => handleDelete(e)}>Borrar Pokemon</button></div>
              
             <div className='imgTitulo'>  
             <img  className='DetaildImg 'src={detail?.img} alt='img pokemon'/>
